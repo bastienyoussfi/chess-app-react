@@ -25,10 +25,7 @@ const ChessBoard: React.FC = () => {
                 piece={piece}
                 isLight={(rowIndex + colIndex) % 2 === 0}
                 isSelected={selectedPiece?.row === rowIndex && selectedPiece?.col === colIndex}
-                onClick={() => {
-                  console.log('Clicking square:', rowIndex, colIndex);
-                  handleSquareClick(rowIndex, colIndex);
-                }}
+                onClick={() => handleSquareClick(rowIndex, colIndex)}
               />
             ))
           ))}
